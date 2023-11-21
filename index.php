@@ -1,7 +1,3 @@
-<?php 
-    $pictures_folder = glob("assets/img/pictures/*.{jpg,png,gif}", GLOB_BRACE);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
