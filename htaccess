@@ -1,0 +1,16 @@
+
+// Doesn't show files extensions in url of the website
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Redirect external .php requests to extensionless URL
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule ^(.+)\.php$ https://safi.com/$1 [R=301,L]
+
+# Resolve .php file for extensionless PHP URLs
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+
+// Here is the first page on the website
+DirectoryIndex home.php
